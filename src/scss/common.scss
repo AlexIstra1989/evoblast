@@ -1,1 +1,55 @@
 // Заголовки, общие БЄМ блоки и проче...
+.title {
+ @include adaptiveValue("font-size", 48, 34);
+ line-height: math.div(48, 48);
+ @extend %intro-regular;
+ color: $mainColor;
+}
+
+.text {
+ @include adaptiveValue("font-size", 20, 18);
+ line-height: math.div(28, 20);
+ color: $textColor;
+}
+
+.btn {
+ font-size: rem(16);
+ line-height: math.div(18, 16);
+ padding: rem(14) rem(35);
+ border-radius: rem(5);
+ color: $primaryColor;
+ background-color: $accentColor;
+ transition: all 0.7s; 
+ &:hover {
+  background-color: $primaryColor;
+  color: $accentColor;
+ } 
+}
+
+.swiper-pagination {
+ display: flex;
+ flex-direction: column;
+ gap: rem(16);
+ position: absolute;
+ top: 40%;
+ left: 10%;
+ @media (max-width: 1400px) {
+  flex-direction: row;
+  position: relative;
+  justify-content: center;
+  margin-top: rem(-100);
+  left: 0;
+  top: 0;
+ }
+}
+
+.swiper-pagination-bullet {
+ width: rem(12);
+ height: rem(12);
+ border-radius: 50%;
+ background-color: #D9D9D9;
+}
+
+.swiper-pagination-bullet-active {
+ background-color: $accentColor;
+}
