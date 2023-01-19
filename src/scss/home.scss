@@ -61,3 +61,30 @@
  }
 }
 //===========================================================================
+.about {
+ @include adaptiveValue("padding-top", 100, 50);
+ @include adaptiveValue("padding-bottom", 100, 50);
+ // .about__inner
+ &__inner {
+  display: flex;
+  justify-content: space-between;
+ }
+ // .about__text-box
+ &__text-box {
+  max-width: rem(842);
+  width: 100%;
+ }
+ // .about__text-main
+ &__text-main {
+  @include adaptiveValue("font-size", 24, 20);
+  line-height: math.div(34, 24);
+  @extend %roboto-bold;
+  color: $mainColor;
+  margin-bottom: rem(24);
+ }
+}
+//===========================================================================
+
+//===========================================================================
+
+//===========================================================================
