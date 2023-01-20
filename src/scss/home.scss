@@ -68,11 +68,18 @@
  &__inner {
   display: flex;
   justify-content: space-between;
+  gap: rem(30);
+  @media (max-width: 1165px) {
+   flex-direction: column;
+  }
  }
  // .about__text-box
  &__text-box {
   max-width: rem(842);
   width: 100%;
+  @media (max-width: 1165px) {
+   max-width: 100%;
+  }
  }
  // .about__text-main
  &__text-main {
@@ -84,7 +91,93 @@
  }
 }
 //===========================================================================
-
+.valuables {
+ @include adaptiveValue("padding-top", 100, 50);
+ @include adaptiveValue("padding-bottom", 100, 50);
+ background-color: $bgColor;
+ // .valuables__container
+ &__container {
+ }
+ // .valuables__slider
+ &__slider {
+  
+ }
+ // .valuables__wrapper
+ &__wrapper {
+  
+ }
+ // .valuables__slide
+ &__slide {
+ }
+ // .valuables__item
+ &__item {
+  display: flex;
+  justify-content: space-between;
+  gap: rem(30);
+  @media (max-width: $mobile) {
+   flex-direction: column;
+  }
+ }
+ // .valuables__content
+ &__content {
+  max-width: rem(407);
+  width: 100%;
+  @media (max-width: $mobile) {
+   max-width: 100%;
+  }
+ }
+ // .valuables__title
+ &__title {
+  @include adaptiveValue("font-size", 34, 26);
+  line-height: math.div(34, 34);
+  margin-bottom: rem(40);
+  @extend %intro-regular;
+ }
+ // .valuables__subtitle
+ &__subtitle {
+  @include adaptiveValue("font-size", 24, 20);
+  line-height: math.div(34, 24);
+  padding-bottom: rem(20);
+  border-bottom: rem(2) solid rgba(188, 188, 188, 0.51);
+  margin-bottom: rem(20);
+ }
+ // .valuables__text
+ &__text {
+ }
+ // .valuables__image-box
+ &__image-box {
+  display: flex;
+  width: rem(847);
+  height: rem(470);
+  object-fit: cover;
+  position: relative;
+ }
+ // .valuables__image
+ &__image {
+  width: 100%;
+  height: 100%;
+  border-radius: rem(5);
+ }
+ // .valuables__buttons
+ &__buttons {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+ }
+}
+.swiper-button-prev,
+.swiper-button-next {
+ width: rem(40);
+ height: rem(40);
+ background-image:(url("../img/icons/arrow-slider.svg"));
+ cursor: pointer;
+}
+.swiper-button-next {
+ transform: rotate(180deg);
+}
 //===========================================================================
 
 //===========================================================================
