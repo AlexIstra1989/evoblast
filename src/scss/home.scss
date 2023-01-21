@@ -168,5 +168,40 @@
  transform: rotate(180deg);
 }
 //===========================================================================
-
+.stats {
+ @include adaptiveValue("padding-top", 100, 50);
+ @include adaptiveValue("padding-bottom", 100, 50);
+ // .stats__items
+ &__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  @include adaptiveValue("gap", 110, 10);
+  @media (max-width: 1100px) {
+   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  @media (max-width: $mobile) {
+   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+ }
+ // .stats__item
+ &__item {
+  @include adaptiveValue("font-size", 20, 15);
+  line-height: math.div(25, 20);
+  text-align: center;
+  text-transform: uppercase;
+  color: $textColor;
+ }
+ // .stats__num
+ &__num {
+  @extend %intro-regular;
+  @include adaptiveValue("font-size", 100, 60);
+  line-height: math.div(100, 100);
+  display: block;
+  margin-bottom: rem(24);
+  color: $accentColor;
+  span {
+   @include adaptiveValue("font-size", 60, 20);
+  }
+ }
+}
 //===========================================================================
