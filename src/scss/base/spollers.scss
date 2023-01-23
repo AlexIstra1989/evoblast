@@ -9,16 +9,27 @@
 // Спойлер
 .spollers__item {
 	font-size: rem(20);
+ transition: all 0.7s;
+ &:hover {
+  background-color: $accentColor;
+ } 
 }
 // Заголовок спойлера
 .spollers__title {
+ @include adaptiveValue("font-size", 28, 20);
+ line-height: math.div(39, 28);
 	width: 100%;
 	cursor: default;
 	text-align: left;
-	border: 1px solid #eee;
 	padding: rem(10) rem(15);
-	border-radius: rem(5);
 	position: relative;
+ span {
+  @include adaptiveValue("font-size", 20, 16);
+  line-height: math.div(28, 20);
+  display: block;
+  text-align: left;
+  color: $textColor;
+ }
 	._spoller-init & {
 		cursor: pointer;
 		&::before,
@@ -39,18 +50,28 @@
 			transform: translate(0, -50%) rotate(-40deg);
 		}
 		&._spoller-active {
+   background-color: $accentColor;
+   color: $primaryColor;
+   span {
+    color: $primaryColor;
+   }
 			&::before {
 				transform: translateX(-75%) rotate(-40deg);
+    background-color: $primaryColor;
 			}
 			&::after {
 				transform: rotate(40deg);
+    background-color: $primaryColor;
 			}
 		}
 	}
+ @media (max-width: 600px) {
+  padding: rem(10) rem(40) rem(10) rem(15);
+ }
 }
 // Контент спойлера
 .spollers__body {
 	padding: rem(20);
-	border-radius: rem(5);
-	border: 1px solid #eee;
+ background-color: $accentColor;
+ color: $primaryColor;
 }
