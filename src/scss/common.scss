@@ -17,13 +17,18 @@
  line-height: math.div(18, 16);
  padding: rem(14) rem(35);
  border-radius: rem(5);
+ border: rem(1) solid transparent;
  color: $primaryColor;
  background-color: $accentColor;
  transition: all 0.7s; 
  &:hover {
   background-color: $primaryColor;
   color: $accentColor;
+  border-color: $accentColor;
  } 
+ @media(max-width: $mobileSmall) {
+  width: 100%;
+ }
 }
 
 .swiper-pagination {

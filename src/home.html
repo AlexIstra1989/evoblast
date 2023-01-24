@@ -198,7 +198,7 @@
       </div>
      </div>
     </div>
-    <section class="products">
+    <section class="products" id="product">
      <div class="products__container">
       <h2 class="products__title title">Продукты и услуги</h2>
       <div class="products__items">
@@ -289,7 +289,7 @@
       </div>
      </div>
     </section>
-    <section class="career">
+    <section class="career" id="career">
      <div class="career__container">
       <div class="career__inner">
        <div class="career__top">
@@ -477,6 +477,41 @@
          </div>
         </div>
        </div>
+      </div>
+     </div>
+    </section>
+    <section class="summary">
+     <div class="summary__container">
+      <div class="summary__inner">
+       <div class="summary__info">
+        <h2 class="summary__title title">Отправить резюме</h2>
+        <p class="summary__text text">Заполните форму или отправьте нам на почту
+         <a href="#" class="summary__link">CV@evoblast.ru</a></p>
+       </div>
+       <form action="#" class="summary__form">
+        <div class="summary__box">
+         <div class="summary__inputs summary__inputs_left">
+          <label class="summary__label" for="#">
+           ФИО*
+           <input class="summary__input" placeholder="Иванов Иван Иванович" autocomplete="off" type="text" name="form[]" data-error="Ошибка">     
+          </label>
+          <input class="summary__input" placeholder="E-mail*" autocomplete="off" type="email" name="form[]" data-error="Ошибка">
+          <input class="summary__input" placeholder="Дата рождения" autocomplete="off" type="number" name="form[]" data-error="Ошибка">
+         </div>
+         <div class="summary__inputs">
+          <input class="summary__input" placeholder="Телефон*" autocomplete="off" type="number" name="form[]" data-error="Ошибка">
+          <input class="summary__input" placeholder="Город*" autocomplete="off" type="text" name="form[]" data-error="Ошибка">
+          <input class="summary__input" placeholder="Желаемая должность*" autocomplete="off" type="text" name="form[]" data-error="Ошибка">
+         </div>
+        </div>
+        <textarea class="summary__entry" placeholder="Сопроводительное письмо"></textarea>
+        <button class="summary__doc" type="button">Прикрепите резюме</button>
+        <div class="summary__checkbox checkbox">
+         <input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+         <label for="c_1" class="checkbox__label"><span class="checkbox__text">Я согласен с условиями политики конфиденциальности</span></label>
+        </div>
+        <button class="summary__btn btn">Отправить резюме</button>
+       </form>
       </div>
      </div>
     </section>
