@@ -1,3 +1,105 @@
-//====================================================================================================
-
-//====================================================================================================
+.footer {
+ @include adaptiveValue("padding-top", 80, 40);
+ padding-bottom: rem(16);
+ background-color: $accentColor;
+ // .footer__items
+ &__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,  minmax(150px, 290px) minmax(200px, 1fr));
+  gap: rem(30);
+  @include adaptiveValue("padding-bottom", 80, 10);
+  border-bottom: rem(1) solid $primaryColor;
+  @media (max-width: 835px) {
+   display: block;
+  }
+ }
+ // .footer__item
+ &__item {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: rem(16);
+  line-height: math.div(22, 16);
+  transition: all 0.7s;
+  &:hover {
+   color: rgba(255, 255, 255, 1);
+  }
+  &_info {
+   @media (max-width: 835px) {
+    margin-bottom: rem(30);
+   }
+  }
+ }
+ &__navigation {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  @include adaptiveValue("gap", 70, 20);
+  @media (max-width: 835px) {
+   display: block;
+  }
+ }
+ // .footer__logo-img
+ &__logo-img {
+  margin-bottom: rem(30);
+ }
+ // .footer__item-title
+ &__item-title {
+  font-weight: 700;
+  color: $primaryColor;
+  margin-bottom: rem(8);
+ }
+ // .footer__list
+ &__list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(8);
+ }
+ // .footer__bottom
+ &__bottom {
+  display: flex;
+  @include adaptiveValue("gap", 30, 10);
+  padding-top: rem(16);
+  @media (max-width: $mobile) {
+   flex-direction: column;
+  }
+ }
+ // .footer__copyright,
+ // .footer__privacy,
+ // .footer__data
+ &__copyright,
+ &__privacy,
+ &__data  {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: rem(12);
+  line-height: math.div(25, 12);
+  transition: all 0.7s;
+  &:hover {
+   color: rgba(255, 255, 255, 1);
+  }
+ }
+ .spollers__title {
+  padding-left: 0;
+ }
+ .spollers__body {
+  padding: 0;
+ }
+ ._spoller-init .spollers__title::before, 
+ ._spoller-init .spollers__title::after {
+  background-color: #fff;
+}
+}
+//==================================================================================
+.contacts {
+ font-size: rem(16);
+ line-height: math.div(22, 16);
+ color: $primaryColor;
+ // .contacts__link
+ &__link {
+  display: block;
+  margin-bottom: rem(16);
+ }
+ // .contacts__address
+ &__address {
+  display: block;
+  font-style: normal;
+  margin-top: rem(31);
+ }
+}
