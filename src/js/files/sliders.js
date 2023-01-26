@@ -223,7 +223,7 @@ function initSliders() {
 			// Пагинация
 			
 			pagination: {
-				el: '.swiper-pagination-valuables',
+				el: '.swiper-pagination-products',
 				clickable: true,
 			},
 			

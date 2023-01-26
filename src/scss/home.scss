@@ -144,6 +144,7 @@
  // .valuables__image
  &__image {
   width: 100%;
+  height: 100%;
   border-radius: rem(5);
  }
  // .valuables__buttons
@@ -305,6 +306,12 @@
   @media (max-width: 525px) {
    display: block;
   }
+ }
+ .swiper-pagination-products {
+  display: flex;
+  justify-content: center;
+  gap: rem(10);
+  padding-top: rem(20 );
  }
 }
 //===========================================================================

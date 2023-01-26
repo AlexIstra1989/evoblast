@@ -1,0 +1,59 @@
+.tabs {
+ // .tabs__navigation
+ &__navigation {
+  line-height: math.div(21, 18);
+  display: flex;
+  flex-wrap: wrap;
+  @include adaptiveValue("gap", 40, 16);
+  color: $primaryColor;
+  position: absolute;
+  top: 50%;
+ }
+ // .tabs__title
+ &__title {
+  transition: all 0.7s;
+  padding-bottom: rem(10);
+  border-bottom: rem(2) solid transparent;
+  border-radius: rem(3);
+  &:hover {
+   border-color: $primaryColor;
+  }
+ }
+ // .tabs__content
+ &__content {
+ }
+ // .tabs__body
+ &__body {
+ }
+}
+//===================================================================
+.main-block {
+ background-repeat: no-repeat;
+ background-size: cover;
+ height: 100vh;
+ margin-top: -130px;
+ // .main-block_about
+ &_about {
+  background-image: url("../img/about-page/about/main.jpg");
+ }
+ // .main-block_develop
+ &_develop {
+  background-image: url("../img/about-page/development/main.jpg");
+ }
+ // .main-block_manual
+ &_manual {
+  background-image: url("../img/about-page/manual/main.jpg");
+ }
+ // .main-block_collab
+ &_collab {
+  background-image: url("../img/about-page/collaboration/main.jpg");
+  background-size: 100% 100%;
+ }
+ // .main-block__title
+ &__title {
+  @include adaptiveValue("font-size", 50, 34);
+  line-height: math.div(62, 50);
+  padding-top: 230px;
+  color: $primaryColor;
+ }
+}

@@ -7,6 +7,9 @@
   justify-content: space-between;
   border-bottom: rem(1) solid $primaryColor;
   height: rem(130);
+  @media (max-width: 900px) {
+   border-bottom: none;
+  }
  }
  // .header__logo
  &__logo {
