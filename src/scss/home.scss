@@ -120,7 +120,7 @@
  &__title {
   @include adaptiveValue("font-size", 34, 26);
   line-height: math.div(34, 34);
-  margin-bottom: rem(40);
+  @include adaptiveValue("margin-bottom", 40, 20);
   @extend %intro-regular;
  }
  // .valuables__subtitle
