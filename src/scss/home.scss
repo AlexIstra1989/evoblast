@@ -62,14 +62,12 @@
 }
 //===========================================================================
 .about {
- @include adaptiveValue("padding-top", 100, 50);
- @include adaptiveValue("padding-bottom", 100, 50);
  // .about__inner
  &__inner {
   display: flex;
   justify-content: space-between;
   gap: rem(30);
-  @media (max-width: 1165px) {
+  @media (max-width: $mobile) {
    flex-direction: column;
   }
  }
@@ -77,7 +75,8 @@
  &__text-box {
   max-width: rem(842);
   width: 100%;
-  @media (max-width: 1165px) {
+  flex: 0 1 66.7%;
+  @media (max-width: $mobile) {
    max-width: 100%;
   }
  }
@@ -92,8 +91,6 @@
 }
 //===========================================================================
 .valuables {
- @include adaptiveValue("padding-top", 100, 50);
- @include adaptiveValue("padding-bottom", 100, 50);
  background-color: $bgColor;
  // .valuables__item
  &__item {
@@ -170,8 +167,6 @@
 }
 //===========================================================================
 .stats {
- @include adaptiveValue("padding-top", 100, 50);
- @include adaptiveValue("padding-bottom", 100, 50);
  // .stats__items
  &__items {
   display: grid;
@@ -207,8 +202,6 @@
 }
 //===========================================================================
 .products {
- @include adaptiveValue("padding-top", 100, 50);
- @include adaptiveValue("padding-bottom", 100, 50);
  background-color: $bgColor;
  // .products__title
  &__title {
@@ -316,8 +309,6 @@
 }
 //===========================================================================
 .career {
- @include adaptiveValue("padding-top", 100, 50);
- @include adaptiveValue("padding-bottom", 100, 50);
  // .career__top
  &__top {
   display: flex;
@@ -413,8 +404,6 @@
 }
 //===========================================================================================
 .summary {
- @include adaptiveValue("padding-top", 100, 50);
- @include adaptiveValue("padding-bottom", 100, 50);
  background-color: $bgColor;
  // .summary__inner
  &__inner {

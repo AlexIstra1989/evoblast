@@ -1,4 +1,9 @@
 // Заголовки, общие БЄМ блоки и проче...
+.block {
+ @include adaptiveValue("padding-top", 100, 50);
+ @include adaptiveValue("padding-bottom", 100, 50);
+}
+
 .title {
  @include adaptiveValue("font-size", 48, 34);
  line-height: math.div(48, 48);
@@ -57,4 +62,9 @@
 
 .swiper-pagination-bullet-active {
  background-color: $accentColor;
+}
+
+.subtitle {
+ @include adaptiveValue("font-size", 24, 20);
+ line-height: math.div(34, 24);
 }
