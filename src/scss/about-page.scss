@@ -239,3 +239,46 @@
   margin-bottom: rem(20);
  }
 }
+//========================================================================================================================
+.manual {
+ background-color: $bgColor;
+ // .manual__items
+ &__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
+  gap: rem(20);
+ }
+ // .manual__item
+ &__item {
+  background-color: $primaryColor;
+  cursor: pointer;
+ }
+ // .manual__image
+ &__image {
+  img {
+   width: 100%;
+  }
+ }
+ // .manual__info
+ &__info {
+  padding: rem(40) rem(25) rem(60);
+  border: 1px solid transparent;
+  transition: all 0.7s;
+  &:hover {
+   border-color: $accentColor;
+  }
+ }
+ // .manual__name
+ &__name {
+  @extend %intro-regular;
+  @include adaptiveValue("font-size", 28, 22);
+  line-height: math.div(28, 28);
+  margin-bottom: rem(20);
+ }
+ // .manual__position
+ &__position {
+  @include adaptiveValue("font-size", 20, 16);
+  line-height: math.div(28, 20);
+  color: $textColor;
+ }
+}
