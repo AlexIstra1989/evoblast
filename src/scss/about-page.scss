@@ -282,3 +282,105 @@
   color: $textColor;
  }
 }
+//===================================================================================
+.collaboration {
+ // .collaboration__inner
+ &__inner {
+  display: flex;
+  align-items: baseline;
+  gap: rem(20);
+  @media (max-width: $tablet) {
+   flex-direction: column;
+  }
+ }
+ // .collaboration__box
+ &__box {
+  flex: 0 1 32.55%
+ }
+ // .collaboration__title
+ &__title {
+  margin-bottom: rem(40);
+ }
+}
+//=================================================================================================
+.documents {
+ flex: 0 1 68.5%;
+ @media (max-width: $tablet) {
+  width: 100%;
+ }
+ // .documents__items
+ &__items {
+  display: flex;
+  flex-direction: column;
+  @include adaptiveValue("gap", 100, 50);
+ }
+ // .documents__item-title
+ &__item-title {
+  @include adaptiveValue("font-size", 32, 28);
+  line-height: math.div(45, 32);
+  @include adaptiveValue("margin-bottom", 60, 30);
+ }
+ // .documents__list-item
+ &__list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: rem(28) 0;
+  border-top: rem(1) solid #D8D8D8;
+ }
+ // .documents__name
+ &__name {
+  @include adaptiveValue("font-size", 20, 18);
+  line-height: math.div(28, 20);
+  max-width: rem(498);
+  width: 100%;
+  margin-right: rem(20);
+ }
+ // .documents__load
+ &__load {
+  width: rem(28);
+  height: rem(28);
+  position: relative;
+  &::after {
+   @include pseudo;
+   @include  background (url("../img/icons/download.svg"));
+   width: 100%;
+   height: 100%;
+   left: 0;
+   top: 0;
+  }
+ }
+}
+//=============================================================================================
+.contact {
+ background-color: $bgColor;
+ // .contact__inner
+ &__inner {
+  display: flex;
+  gap: rem(20);
+  @media (max-width: $tablet) {
+   flex-direction: column;
+  }
+ }
+ // .contact__box
+ &__box {
+  flex: 0 1 35%;
+ }
+ // .contact__title
+ &__title {
+  margin-bottom: rem(40);
+ }
+ // .contact__text
+ &__text {
+  a {
+   color: $accentColor;
+  }
+ }
+ // .contact__image
+ &__image {
+  flex: 0 1 70%;
+  img {
+   width: 100%;
+  }
+ }
+}
