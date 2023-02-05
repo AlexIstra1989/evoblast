@@ -144,8 +144,10 @@ body {
 
 // Подключение стилей отдельных блоков
 @import "header";
+@import "header-transp";
 @import "footer";
 @import "about-page";
+@import "news-page";
 
 // Подключение стилей отдельных страниц
 @import "home";
