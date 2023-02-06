@@ -1,0 +1,144 @@
+.career-page {
+ background-image: url("../img/career-page/main-bg.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ height: 100vh;
+ margin-top: -130px;
+ // .career-page__box 
+ &__box {
+  padding-top: rem(300);
+  color: $primaryColor;
+ }
+ // .career-page__title
+ &__title {
+  @extend %roboto-bold;
+  @include adaptiveValue("font-size", 50, 34);
+  line-height: math.div(62, 50);
+  margin-bottom: rem(25);
+ }
+ // .career-page__text
+ &__text {
+  max-width: rem(750);
+  width: 100%;
+ }
+}
+//==============================================================================
+.hero {
+ background-color: $bgColor;
+ // .hero__title
+ &__title {
+  margin-bottom: rem(40);
+ }
+ // .hero__item
+ &__item {
+  display: flex;
+  background-color: $primaryColor;
+  padding: rem(40);
+  @include adaptiveValue("gap", 40, 20);
+  overflow: auto;
+  @media (max-width: $mobile) {
+   display: block;
+  }
+ }
+ // .hero__image
+ &__image {
+  flex: 0 1 31%;
+  img {
+   width: 100%;
+  }
+  @media (max-width: $mobile) {
+   margin-bottom: rem(30);
+  }
+ }
+ // .hero__info
+ &__info {
+  flex: 0 1 63.6%;
+ }
+ // .hero__name
+ &__name {
+  @extend %intro-regular;
+  @include adaptiveValue("font-size", 28, 24);
+  line-height: math.div(28, 28);
+  margin-bottom: rem(10);
+ }
+ // .hero__position
+ &__position {
+  display: block;
+  margin-bottom: rem(20);
+ }
+ // .hero__content
+ &__content {
+  display: none;
+  height: auto;
+  margin-bottom: rem(20);
+
+ }
+ // .hero__text
+ &__text {
+  @include adaptiveValue("font-size", 18, 16);
+  display: flex;
+  flex-direction: column;
+  gap: rem(15);
+  margin-bottom: rem(15);
+  background-color: $primaryColor;
+ }
+ // .hero__more
+ &__more {
+  display: inline-block;
+  cursor: pointer;
+  color: $accentColor;
+ }
+ #check,
+ #ww,
+ #qq {
+  display: none;
+ }
+ #check:checked ~ .hero__content {
+  display: block;
+ }
+ #ww:checked ~ .hero__content {
+  display: block;
+ }
+ #qq:checked ~ .hero__content {
+  display: block;
+ }
+ #check:checked ~ label {
+  visibility: hidden;
+ }
+ #ww:checked ~ label {
+  visibility: hidden;
+ }
+ #qq:checked ~ label {
+  visibility: hidden;
+ }
+ #check:checked ~ label::after {
+  content: "Свернуть";
+  visibility: visible;
+  display: block;
+ }
+ #ww:checked ~ label::after {
+  content: "Свернуть";
+  visibility: visible;
+  display: block;
+ }
+ #qq:checked ~ label::after {
+  content: "Свернуть";
+  visibility: visible;
+  display: block;
+ }
+ .swiper-wrapper {
+  height: 100% !important;
+ }
+}
+//=======================================================================
+.interview {
+ display: flex;
+ flex-direction: column;
+ gap: rem(20);
+ background-color: $primaryColor;
+ // .interview__question
+ &__question {
+  font-weight: 700;
+  margin-bottom: rem(20);
+ }
+}
