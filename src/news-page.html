@@ -16,7 +16,7 @@
         событиях и новых рекордах Группы компаний
         </p>
        <div class="news__items">
-        <a class="news__item">
+        <a data-popup="#news" class="news__item" href="#">
          <div class="news__image">
           <img src="@img/news-page/image-1.jpg" alt="#">
          </div>
@@ -65,6 +65,7 @@
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
+  @@include('html/_popup.htm',{})
 		@@include('html/_js.htm',{})
 	</body>
 </html>
