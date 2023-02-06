@@ -82,6 +82,9 @@ body::after {
   width: 100%;
   height: rem(255);
   margin-bottom: 25px;
+  @media (max-width: $mobileSmall) {
+   height: auto;
+  }
  }
  .popup__text {
   display: flex;
