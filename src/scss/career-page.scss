@@ -254,3 +254,67 @@
   }
  }
 }
+//======================================================================
+.universities {
+ background-color: $bgColor;
+ // .universities__top
+ &__top {
+  display: flex;
+  gap: rem(20);
+  @include adaptiveValue("margin-bottom", 60, 30);
+  @media (max-width: $tablet) {
+   flex-direction: column;
+  }
+ }
+ // .universities__title
+ &__title {
+  flex: 0 1 50%;
+ }
+ // .universities__text
+ &__text {
+  flex: 0 1 105%;
+ }
+ // .universities__items
+ &__items {
+  display: flex;
+  justify-content: flex-end;
+  gap: rem(20);
+  @include adaptiveValue("margin-bottom", 60, 30);
+  @media (max-width: $mobile) {
+   flex-wrap: wrap;
+  }
+ }
+ // .universities__item
+ &__item {
+  max-width: rem(255);
+  width: 100%;
+  max-height: rem(168);
+  min-height: rem(168);
+  background-color: $primaryColor;
+  background-repeat: no-repeat;
+  background-position: center;
+  &_yurgpu {
+   background-image: url("../img/career-page/univer/yurgpu.svg");
+  }
+  &_dvfu {
+   background-image: url("../img/career-page/univer/dvfu.svg");
+  }
+  &_gorny {
+   background-image: url("../img/career-page/univer/gorny.svg");
+  }
+  @media (max-width: $mobile) {
+   max-width: 100%;
+  }
+ }
+ // .universities__info
+ &__info {
+  color: $mainColor;
+  text-align: right;
+  a {
+   color: $accentColor;
+  }
+  @media (max-width: $mobile) {
+   text-align: left;
+  }
+ }
+}
