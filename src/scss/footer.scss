@@ -2,6 +2,10 @@
  @include adaptiveValue("padding-top", 80, 40);
  padding-bottom: rem(16);
  background-color: $accentColor;
+ // .footer__inner
+ &__inner {
+  position: relative;
+ }
  // .footer__items
  &__items {
   display: grid;
@@ -32,6 +36,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   @include adaptiveValue("gap", 70, 20);
+  position: relative;
   @media (max-width: 835px) {
    display: block;
   }
@@ -51,6 +56,28 @@
   display: flex;
   flex-direction: column;
   gap: rem(8);
+ }
+ // .footer__link-up
+ &__link-up {
+  position: absolute;
+  width: rem(60);
+  height: rem(60);
+  background-color: $primaryColor;
+  border-radius: 50%;
+  right: 5%;
+  top: -10%;
+  &::before {
+   @include pseudo;
+   @include background(url("../img/icons/arrow-black.svg"));
+   width: rem(30);
+   height: rem(30);
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%) rotate(-90deg);
+  }
+  @media (max-width: 835px) {
+   top: 0;
+  }
  }
  // .footer__bottom
  &__bottom {
