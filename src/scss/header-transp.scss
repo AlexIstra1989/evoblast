@@ -25,6 +25,7 @@
    flex-direction: column;
    align-items: center;
    margin-bottom: rem(50);
+   color: $primaryColor;
   }
  }
  // .header__menu-link
@@ -33,7 +34,7 @@
   border-bottom: rem(2) solid transparent;
   transition: all 0.7;
   &:hover {
-   border-color: $mainColor;
+   border-color: $primaryColor;
   }
  }
  // .header__btn-search
@@ -110,10 +111,12 @@
      &::before {
       top: calc(50% - rem(1));
       transform: rotate(-45deg);
+      background-color: $primaryColor;
      }
      &::after {
       bottom: calc(50% - rem(1));
       transform: rotate(45deg);
+      background-color: $primaryColor;
      }
     }
    }
