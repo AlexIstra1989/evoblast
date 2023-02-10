@@ -144,9 +144,6 @@
   margin-bottom: rem(20);
   position: relative;
  }
- // .services__wrapper
- &__wrapper {
- }
  // .services__slide
  &__slide {
   width: 100% !important;
@@ -188,5 +185,73 @@
   gap: rem(12);
   @include adaptiveValue("font-size", 20, 16);
   line-height: math.div(28, 20);
+ }
+}
+//=======================================================================
+.spollers-services {
+ // .spollers-services__item
+ &__item {
+  padding-bottom: rem(28);
+  &:not(:first-child) {
+   padding-top: rem(28);
+  }
+  &:not(:last-child) {
+   border-bottom: rem(2) solid #D8D8D8;
+  }
+ }
+ // .spollers-services__title
+ &__title {
+  font-weight: 600;
+  @include adaptiveValue("font-size", 20, 18);
+  line-height: math.div(28, 20);
+  text-align: left;
+  position: relative;
+  padding-right: rem(30);
+  width: 100%;
+  ._spoller-init & {
+   cursor: pointer;
+   &::before,
+   &::after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    background-color: #000;
+    height: 2px;
+    width: 12px;
+    transition: transform 0.5s ease 0s;
+   }
+   &::before {
+    transform: translate(-75%, -50%) rotate(40deg);
+   }
+   &::after {
+    transform: translate(0, -50%) rotate(-40deg);
+   }
+   &._spoller-active {
+    &::before {
+     transform: translateX(-75%) rotate(-40deg);
+    }
+    &::after {
+     transform: rotate(40deg);
+    }
+   }
+  }
+  span {
+   max-width: rem(545);
+   width: 100%;
+   display: block;
+   @media (max-width: $mobile) {
+    max-width: rem(400);
+   }
+  }
+ }
+ // .spollers-services__body
+ &__body {
+  font-weight: 400;
+  @include adaptiveValue("font-size", 18, 16);
+  line-height: math.div(26, 18);
+  padding: rem(10) 0 rem(20);
+  max-width: rem(660);
+  width: 100%;
  }
 }
